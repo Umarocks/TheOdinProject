@@ -15,8 +15,6 @@ Front-end Frameworks: Conquering libraries like React to create stunning user in
 Navigating the Odyssey
 Wander through my repository's structure – a well-organized landscape to keep things sane:
 
-lua
-Copy code
 /
 |-- foundations/
 |   |-- project1/
@@ -28,6 +26,7 @@ Copy code
 |   |-- ...
 |-- ...
 |-- README.md
+
 Each section holds treasures of exercises and projects. You'll find detailed instructions, starter code, and hints to unravel the mysteries.
 
 Ready to Embark?
