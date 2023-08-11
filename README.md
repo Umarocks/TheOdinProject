@@ -1,7 +1,5 @@
 # The Odin Project Journey
 
-![The Odin Project Logo](https://example.com/logo.png)
-
 ## Greetings, fellow Odin Project travelers!
 
 Welcome to my personal repository for The Odin Project. If you're embarking on the thrilling adventure of web development with The Odin Project, you've stumbled upon the right place. This repository is my playground for all things Odin – exercises, projects, and more!
