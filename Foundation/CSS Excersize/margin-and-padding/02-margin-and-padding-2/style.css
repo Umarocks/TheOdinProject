@@ -1,0 +1,52 @@
+body {
+    background: #eee;
+    font-family: sans-serif;
+  }
+  
+  .card {
+    width: 400px;
+    background: #fff;
+    margin: 16px auto;
+    padding: 8px;
+  }
+  
+  .title {
+    background: #e3f4ff;
+    font-size: 16px;
+    padding: 8px;
+    margin: 8px;
+  }
+  
+  .content {
+    background: #e3f4ff;
+    margin: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .button-container {
+    background: #e3f4ff;
+    margin: 8px;
+    padding: 8px;
+    text-align: center;
+    
+  }
+  
+  button {
+    display: block;
+    background: white;
+    border: 1px solid #eee;
+    margin: 0 auto;
+    padding: 8px;
+    
+  }
+
+
+
+  /* Use this section to check your work. On these projects, your goal isn't to attain 100% pixel perfection, but to use the tools you've learned to get relatively close to the desired output.
+
+Everything inside the .button-container section is centered, and there is 8px padding.
+The Big Button is centered on its own line.
+The Big Button has 24px space on the sides, and 8px on top and bottom. */
