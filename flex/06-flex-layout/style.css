@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 600px;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+  margin: 4px;
+}
+
+input {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 8px 24px;
+  width: 550px;
+  margin-bottom: 16px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+  /* height: 89vh; */
+  align-items: center;
+  flex: 1;
+}
+
+.input{
+  /* border: 2px solid green; */
+  justify-content: center;
+  
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid rgb(0, 0, 0); */
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-links{
+  display: flex;
+  /* border: solid 2px yellow; */
+  padding-right: 40px ;
+}
+
+.left-links{
+  display: flex;
+  /* border: solid 2px green; */
+}
+
+.footer{
+  display: flex;
+  background-color: #eeeeee;
+  justify-content: space-between;
+}
+
+ul{
+  list-style: none;
+  gap: 16px;
+  list-style-type: ;
+  color: black;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
