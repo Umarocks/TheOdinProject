@@ -39,7 +39,7 @@ body {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
-  border: 2px green solid;
+  /* border: 2px green solid; */
   padding: 16px;
   margin: 16px;
   width: 300px;
@@ -54,7 +54,7 @@ body {
 }
 
 .card-side{
-  border: 2px blue solid;
+  /* border: 2px blue solid; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
