@@ -1,19 +1,102 @@
+body{
+    background-color: #1F2937;
+    margin: 0px;
+}
 nav {
     display: flex;
     justify-content: space-between;
     background-color: #1F2937;
-    color: white;
-    margin: 0;
-    padding: 0;
+    color: #F9FAF8;
+    padding-left: 24px;
+    font-size: 24px;
+    font-weight: 800;
 }
 
 ul{
     display: flex;
     list-style: none;
     gap: 24px;
-    margin: 0;
+    margin: 24px;
+}
+
+a{
+    font-size: 18px;
+    color: #e5e7eb;
+    text-decoration: none;
 }
 
 .container-one{
     display: flex;
+    color: white;
+    justify-content:center;
+    width: auto;
+    padding: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.thisWebsiteIsAwsome{
+    justify-content: space-around;
+    padding-left: 36px;
+    padding-right: 36px;
+    flex: 1;
+}
+
+.signup{
+    background-color: #3882F6;
+    color: white;
+    border: 0;
+    padding:8px;
+    border-radius: 8px;
+    width: 100px;
+}
+
+.placeholder{
+    display: flex;
+    background-color: #e5e7eb;
+    justify-content: center;
+    align-items: center;
+    color: #1F2937;
+    flex: 1;
+    font-size: 48px;
+}
+
+.HeroMainText{
+  font-size: 48px;
+}
+.HeroSecondaryText{
+    font-size: 18px;
+}
+
+.container-two{
+    background-color: white;
+}
+
+.InformationHeaderText{
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height:auto;
+    border: 2px solid red;
+}
+
+.one{
+    width: 200px;
+    margin: 20px;
+}
+
+.one img{
+    border: 5px solid #3882F6;
+    margin: 0px;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
 }
