@@ -11,6 +11,7 @@ nav {
     padding-left: 24px;
     font-size: 24px;
     font-weight: 800;
+
 }
 
 ul{
@@ -30,16 +31,13 @@ a{
     display: flex;
     color: white;
     justify-content:center;
-    width: auto;
     padding: 100px;
     margin-left: 200px;
     margin-right: 200px;
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 
 .thisWebsiteIsAwsome{
-    justify-content: space-around;
     padding-left: 36px;
     padding-right: 36px;
     flex: 1;
@@ -87,7 +85,9 @@ a{
     justify-content: center;
     width: auto;
     height:auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    padding-bottom: 100px;
+    align-items: center;
 }
 
 .one{
@@ -101,4 +101,86 @@ a{
     border-radius: 20px;
     width: 200px;
     height: 200px;
+}
+
+.one p{
+    font-size: larger;
+    text-align: center;
+}
+
+.container-three{
+    background-color: #e5e7eb;
+    font-size: 36px;
+    color: #1F2937;
+    padding: 120px; 
+}
+
+.thorQuote {
+    text-align:justify;
+    font-style: italic;
+    font-weight: lighter;
+    /* border: solid red 2px; */
+    margin-left:350px ;
+    margin-right:350px ;
+}
+
+#quote-name{
+    /* border: 2px solid green; */
+    text-align:justify;
+    font-style:normal;
+    font-weight: lighter;
+    text-align: end;
+    margin-right: 350px;
+}
+
+.container-four{
+    background-color: white;
+    padding: 50px;
+}
+
+.callToAction{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #3882F6;
+    border-radius: 15px;
+    margin: 120px;
+    margin-left: 170px;
+    margin-right: 170px;
+    padding: 80px;
+    color: white;
+    /* font-size: 36px; */
+}
+
+.callToAction p{
+    margin: 0px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: lighter;
+}
+
+.callToAction h3{
+    font-size: 36px;
+    margin: 0px;
+}
+
+.right-side{
+    margin-left: 50px;
+}
+
+.right-side button{
+    font-size: 30px;
+    border-radius: 10px;
+    /* font-weight: 800; */
+    color: white;
+    background-color: #3882F6;
+    border: 2px solid white; 
+}
+
+footer{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
 }
