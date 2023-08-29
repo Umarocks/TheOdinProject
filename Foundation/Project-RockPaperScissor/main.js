@@ -18,43 +18,73 @@ function getPlayerChoice(){
 function Result(computerChoice,playerSelectionIndex){
         if(computerChoice==0 ){//rock 
             if(playerSelectionIndex==0 ){//rock
-                console.log("The Game Ended in a Draw");
+                // console.log("The Game Ended in a Draw");
+                // computerScore++;
+                // playerScore++;
             }
             else if(playerSelectionIndex==1){ //paper
-                console.log("You Won! YAY");
+                // console.log("You Won! YAY");
+                playerScore++;
             }
             else{ //scissor
-                console.log("Computer Won :(");
+                // console.log("Computer Won :(");
+                computerScore++;
             }
         }
         else if(computerChoice==1){ //paper
             if(playerSelectionIndex==0){ //rock
-                console.log("Computer Won :(");
+                // console.log("Computer Won :(");
+                computerScore++;
             }
             else if(playerSelectionIndex==1){ //paper
-                console.log("The Game Ended in a Draw");
+                // console.log("The Game Ended in a Draw");
+                // computerScore++;
+                // playerScore++;
             }
             else{ //scissor
-                console.log("You Won! YAY");
+                // console.log("You Won! YAY");
+                playerScore++;
             }
         }
         else if(computerChoice==2){ //scissor
             if(playerSelectionIndex==0){ //rock
-                console.log("You Won! YAY");
+                // console.log("You Won! YAY");
+                playerScore++;
             }
             else if(playerSelectionIndex==1){ //paper
-                console.log("Computer Won :(");
+                // console.log("Computer Won :(");
+                computerScore++;
             }
             else{ //scissor
-                console.log("The Game Ended in a Draw");
+                // console.log("The Game Ended in a Draw");
+                // computerScore++;
+                // playerScore++;
             }
         }
 }
 
 function playRound(){
     Result(getComputerChoice(),getPlayerChoice());
+    console.log("Score:computer-"+computerScore +" player-" + playerScore);
+}
+
+function game(){
+    for(i=0;i<5;i++){
+        playRound();
+    }
+    if(computerScore>playerScore){
+        console.log("Computer Won! Better Luck Next Time");
+    }    
+    else{
+        console.log("You Won! YAY!");
+    }
     console.log("Game End")
 }
-const stringArray = ["rock","paper","scissor"]
 
+
+
+const stringArray = ["rock","paper","scissor"]
+let computerScore=0;
+let playerScore=0;
+game();
 
