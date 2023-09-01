@@ -1,4 +1,4 @@
-const reverseString = require('./reverseString')
+const reverseString = require('./reverseString-solution');
 
 describe('reverseString', () => {
   test('reverses single word', () => {
@@ -6,13 +6,13 @@ describe('reverseString', () => {
   });
 
   test('reverses multiple words', () => {
-    expect(reverseString('hello there')).toEqual('ereht olleh')
-  })
+    expect(reverseString('hello there')).toEqual('ereht olleh');
+  });
 
   test('works with numbers and punctuation', () => {
-    expect(reverseString('123! abc!')).toEqual('!cba !321')
-  })
+    expect(reverseString('123! abc!')).toEqual('!cba !321');
+  });
   test('works with blank strings', () => {
-    expect(reverseString('')).toEqual('')
-  })
+    expect(reverseString('')).toEqual('');
+  });
 });
