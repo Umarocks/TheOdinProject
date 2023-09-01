@@ -1,1 +1,3 @@
 just trying my commit as stated on the odin project
+
+testing if unix got connected to github by uploading this 
