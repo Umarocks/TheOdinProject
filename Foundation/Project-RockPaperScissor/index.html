@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js" ></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Rock Paper Scissor</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body>
+    <div class="title">
+      <h1>Rock, Paper, Scissor?</h1>
+    </div>
+    <div class="container">
+      <div class="playerSide">
+        <h3>Player</h3>
+        <div class="icon-name">
+          <img src="./images/user.png" alt="player image" />
+          <!-- <p>Score:</p> -->
+        </div>
+        <div class="choices">
+          <div class="rock">
+            <img src="./images/rock.png" alt="" />
+          </div>
+          <div class="paper">
+            <img src="./images/paper.png" alt="" />
+          </div>
+          <div class="scissor">
+            <img src="./images/scissors.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="computerSide">
+        <div class="playerSide">
+          <h3>Computer</h3>
+          <div class="icon-name">
+            <img src="./images/user.png" alt="player image" />
+            <!-- <p>Score:</p> -->
+          </div>
+          <div class="choices">
+            <div class="rock">
+                <button type="button" onclick="buttonClick()">
+            
+                </button>
+              <img src="./images/rock.png" alt="" />
+            </div>
+            <div class="paper">
+              <img src="./images/paper.png" alt="" />
+            </div>
+            <div class="scissor">
+              <img src="./images/scissors.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
