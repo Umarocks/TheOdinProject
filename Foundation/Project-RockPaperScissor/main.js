@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const stringArray = ["rock", "paper", "scissor"];
   let computerScore = 0;
   let playerScore = 0;
+  let computedFinalScore;
 
   function getComputerChoice() {
     const computerRockSelection = document.querySelector(".computerSide .rock");
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Computer Selected " + stringArray[computerChoice]);
     const computerChoiceindex = ".computerSide ." + stringArray[computerChoice];
     const computerSelectionColor = document.querySelector(computerChoiceindex);
-    computerSelectionColor.style.backgroundColor = "Blue";
+    computerSelectionColor.style.backgroundColor = "#7986E8";
 
     return computerChoice;
   }
@@ -40,16 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (playerSelectionIndex == 0) {
       const playerSelectionToColor =
         document.querySelector(".playerSide .rock");
-      playerSelectionToColor.style.backgroundColor = "Red";
+      playerSelectionToColor.style.backgroundColor = "#fb5968";
     } else if (playerSelectionIndex == 1) {
       const playerSelectionToColor =
         document.querySelector(".playerSide .paper");
-      playerSelectionToColor.style.backgroundColor = "Red";
+      playerSelectionToColor.style.backgroundColor = "#fb5968";
     } else if (playerSelectionIndex == 2) {
       const playerSelectionToColor = document.querySelector(
         ".playerSide .scissor"
       );
-      playerSelectionToColor.style.backgroundColor = "Red";
+      playerSelectionToColor.style.backgroundColor = "#fb5968";
     }
   }
   function getPlayerChoice() {
@@ -127,20 +128,47 @@ document.addEventListener("DOMContentLoaded", function () {
     playerScoreDOM.textContent = "Score:" + playerScore;
     const computerScoreDOM = document.querySelector("#computerScore");
     computerScoreDOM.textContent = "Score:" + computerScore;
-
-    console.log("Score:computer-" + computerScore + " player-" + playerScore);
+    computedFinalScore="Score " + computerScore + "-" + playerScore;
+    // console.log("Score:computer-" + computerScore + " player-" + playerScore);
   }
 
   async function game() {
     for (i = 0; i < 5; i++) {
       await playRound();
     }
+
+    const endDiv = document.querySelector(".gameends");
+    endDiv.id= "gameEnd";
+    const winnerImage = document.createElement("img");
+    const finalScore = document.createElement("p");
+    finalScore.textContent=computedFinalScore;
     if (computerScore > playerScore) {
-      console.log("Computer Won! Better Luck Next Time");
+      // console.log("Computer Won! Better Luck Next Time");
+      winnerImage.src="./images/robot.png";
+      winnerImage.width="200px";
+      winnerImage.height="auto";
+      endDiv.textContent="Computer Won :( \nGame Ends!\n ";
+      endDiv.appendChild(winnerImage);
     } else {
-      console.log("You Won! YAY!");
+      // console.log("You Won! YAY!");
+      winnerImage.src="./images/user.png";
+      winnerImage.width="200px";
+      winnerImage.height="auto";
+      endDiv.textContent="You Won! YAY!\nGame Ends\n";
+      endDiv.appendChild(winnerImage);
     }
-    console.log("Game End");
+    const playerSideHide=document.querySelector(".playerSide");
+    const computerSideHide=document.querySelector(".computerSide");
+    playerSideHide.style.display="none";
+    computerSideHide.style.display="none";
+    endDiv.appendChild(finalScore);
+    endDiv.style.display="block";
+    const restartDiv=document.querySelector(".restart");
+    restartDiv.style.display="flex";
+    restartDiv.addEventListener("click",function(){
+      console.log("restart click");
+      location.reload();
+    });
   }
 
   game();

@@ -37,6 +37,25 @@ img{
     color: aliceblue;
     
 }
+
+.gameends{
+    display: none;
+    text-align: center;
+    width: 400px;
+    height: 320px;
+    margin: 20px;
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+.gameends img{
+    width: 200px;
+    height: auto;
+    margin: 20px;
+    padding:20px
+    
+}
+
 .choices{
     display: flex;
     justify-content: center;
@@ -69,3 +88,26 @@ img{
     transform: scale(0.95) ;
 }
 
+.restart{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    width: 100px;
+    height: auto;
+    margin: 20px;
+    padding-left:10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+.restart:hover{
+    cursor: pointer;
+    background-color: rgba(240, 248, 255, 0.678);
+}
+
+.restart-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
