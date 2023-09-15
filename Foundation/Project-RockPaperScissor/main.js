@@ -149,7 +149,11 @@ document.addEventListener("DOMContentLoaded", function () {
       winnerImage.height="auto";
       endDiv.textContent="Computer Won :( \nGame Ends!\n ";
       endDiv.appendChild(winnerImage);
-    } else {
+    } 
+    else if (computerScore===playerScore){
+      endDiv.textContent="The Game ended in a draw!\nGame Ends\n";
+    }
+    else {
       // console.log("You Won! YAY!");
       winnerImage.src="./images/user.png";
       winnerImage.width="200px";
