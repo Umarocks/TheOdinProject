@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+}
+
+body{
+    margin: 0%;
+}
+
+.leftside{
+    display: flex;
+    flex-basis: 35%;
+    height: 100vh;
+    background-image: url("./images/panel-bgc.jpg");
+    background-size: cover;
+    /* position: relative; */
+}
+
+.leftside img{
+    width: 100px;
+    height: 100px;
+}
