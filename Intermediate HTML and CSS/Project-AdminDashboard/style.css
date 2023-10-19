@@ -1,21 +1,23 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+
 body {
   margin: 0px;
 }
+
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 4fr;
+  height: 100vh;
 }
-.header {
-  grid-column: 2/4;
-}
+
 .mainContent {
   grid-column: 2/4;
   grid-row: 2/4;
 }
+
 .sideBar img {
   width: 20px;
   margin-right: 20px;
@@ -34,6 +36,57 @@ body {
   font-size: small;
 }
 
-.sideBar ul{
-    padding-left: 1rem;
+.sideBar ul {
+  padding-left: 1rem;
+}
+
+.header {
+  grid-column: 2/4;
+}
+
+.headerTopSection{
+    display: flex;
+    width: 100%;
+    font-size: small;
+    justify-content: space-between;
+}
+
+.headerTopSectionLeftSide{
+    display: flex;
+    padding: 15px;
+    justify-content: space-evenly;
+    /* width: 300px; */
+}
+
+.headerTopSectionRightSide{
+    display: flex;
+    padding: 15px;
+    justify-content: space-evenly;
+    width: 200px;
+}
+.headerTopSectionProfile{
+    display: flex;
+    font-size: smaller;
+    justify-content: center;
+    
+}
+.headerTopSectionProfile img{
+    width: 30px;
+    margin-right: 5px;
+    border-radius: 30px;
+}
+
+.headerTopSectionProfile h3{
+  margin: 7px;
+}
+
+#searchBox{
+    width: 45vw;
+    max-width: 300px;
+    height: 22px;
+    margin-left: 5px;
+    background-color: rgba(226, 232, 240,255);
+    border: none;
+    border-radius: 15px;
+
 }
