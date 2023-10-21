@@ -44,73 +44,74 @@ body {
   grid-column: 2/4;
 }
 
-.headerTopSection{
-    display: flex;
-    width: 100%;
-    font-size: small;
-    justify-content: space-between;
+.headerTopSection {
+  display: flex;
+  width: 100%;
+  font-size: small;
+  justify-content: space-between;
 }
 
-.headerTopSectionLeftSide{
-    display: flex;
-    padding: 15px;
-    margin-left: 20px;
-    justify-content: space-evenly;
-    /* width: 300px; */
+.headerTopSectionLeftSide {
+  display: flex;
+  padding: 15px;
+  margin-left: 20px;
+  justify-content: space-evenly;
+  /* width: 300px; */
 }
 
-.headerTopSectionRightSide{
-    display: flex;
-    padding: 15px;
-    justify-content: space-evenly;
-    width: 200px;
+.headerTopSectionRightSide {
+  display: flex;
+  padding: 15px;
+  justify-content: space-evenly;
+  width: 200px;
 }
-.headerTopSectionProfile{
-    display: flex;
-    font-size: 13px;
-    justify-content: center;
-    
+.headerTopSectionProfile {
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
 }
-.headerTopSectionProfile img{
-    width: 30px;
-    border: 1px solid rgba(226, 232, 240,255);
-    margin-right: 10px;
-    border-radius: 30px;
+.headerTopSectionProfile img {
+  width: 30px;
+  border: 1px solid rgba(226, 232, 240, 255);
+  margin-right: 10px;
+  border-radius: 30px;
 }
 
-.headerTopSectionProfile h3{
+.headerTopSectionProfile h3 {
   margin: 7px;
 }
 
-#searchBox{
-    width: 45vw;
-    max-width: 300px;
-    height: 22px;
-    background-color: rgba(226, 232, 240,255);
-    border: none;
-    border-radius: 15px;
-    margin-left: 20px;
+#searchBox {
+  width: 45vw;
+  max-width: 300px;
+  height: 22px;
+  background-color: rgba(226, 232, 240, 255);
+  border: none;
+  border-radius: 15px;
+  margin-left: 20px;
 }
 
-.headerBottomSectionLeftSide{
+.headerBottomSectionLeftSide {
   margin-left: 35px;
   display: flex;
   align-items: center;
 }
 
-.headerBottomSectionProfileIcon img{
+.headerBottomSectionProfileIcon img {
   width: 60px;
-  border: 1px solid rgba(226, 232, 240,255);
+  border: 1px solid rgba(226, 232, 240, 255);
   border-radius: 50%;
   margin-right: 15px;
 }
 
-.headerBottomSectionName h3,p  {
+.headerBottomSectionName h3,
+p {
   margin: 0px;
 }
 
-#New,#Upload,#Share{
-  
+#New,
+#Upload,
+#Share {
   width: 75px;
   height: 30px;
   border-radius: 15px;
@@ -118,52 +119,49 @@ body {
   background-color: rgb(0, 141, 235);
   color: white;
   margin: 10px;
-
 }
 
-.headerBottomSectionRightSide{
+.headerBottomSectionRightSide {
   display: flex;
-  align-items:last baseline;
+  align-items: last baseline;
 }
 
-.headerBottomSection{
+.headerBottomSection {
   display: flex;
   justify-content: space-between;
 }
 
-.superCoolProject h4,p{
+.superCoolProject h4,
+p {
   margin: 0px;
   padding: 0px;
 }
 
-.mainContentIcons{
-display: flex;
-justify-content: end;
-align-items:end;
-padding-right: 10px;
+.mainContentIcons {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding-right: 10px;
 }
 
-
-.mainContentIcons img{
+.mainContentIcons img {
   padding: 10px;
 }
 
-
 /* entire main section */
 .mainContent {
-  background-color: rgba(226,232,240,255);
+  background-color: rgba(226, 232, 240, 255);
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  padding: 30px 20px 40px 20px;
+  grid-template-rows: 1fr ;
+  padding: 30px 0px 40px 20px;
   max-height: 100%;
-
 }
 
 /* each container  */
-.superCoolProject{ 
+.superCoolProject {
   background-color: white;
   padding: 30px 20px 20px 20px;
   width: 80%;
@@ -175,7 +173,13 @@ padding-right: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: -webkit-linear-gradient(left, #88c7ff, #88c7ff 2%, transparent 2%, transparent 100%);
+  background-image: -webkit-linear-gradient(
+    left,
+    #88c7ff,
+    #88c7ff 2%,
+    transparent 2%,
+    transparent 100%
+  );
 }
 
 .allcontainers {
@@ -184,12 +188,74 @@ padding-right: 10px;
   grid-auto-rows: auto; /* Automatically determine row height based on content */
 }
 
-.mainContentLeftSide{
+.mainContentLeftSide {
   grid-column: 1/2;
   grid-row: 1/3;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
-.project-text h4{
-  margin:5px
+.project-text h4 {
+  margin: 5px;
 }
+.announcement h4,
+.announcementdiv h4 {
+  margin: 5px;
+}
+
+.announcementdiv {
+  background-color: white;
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px rgb(175, 175, 175);
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.announcementdiv h4,
+p {
+  margin: 0px;
+  font-size: small;
+}
+.announcementdiv p {
+  font-weight: lighter;
+  font-size: 11px;
+  color: rgb(77, 77, 77);
+}
+
+.sitemain,
+.community {
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.community,
+.privacypolicy {
+  padding-top: 10px;
+}
+
+.trending-container {
+  background-color: white;
+  width: 80%;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px rgb(175, 175, 175);
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: small;
+}
+
+.trending-profile {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+  .trending-profile img{
+    width: 30px;
+    border-radius: 50%;
+  }
