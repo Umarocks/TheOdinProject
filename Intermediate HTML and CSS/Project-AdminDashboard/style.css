@@ -108,3 +108,25 @@ body {
 .headerBottomSectionName h3,p  {
   margin: 0px;
 }
+
+#New,#Upload,#Share{
+  
+  width: 75px;
+  height: 30px;
+  border-radius: 15px;
+  border-style: none;
+  background-color: rgb(0, 141, 235);;
+  color: white;
+  margin: 10px;
+
+}
+
+.headerBottomSectionRightSide{
+  display: flex;
+  align-items:last baseline;
+}
+
+.headerBottomSection{
+  display: flex;
+  justify-content: space-between;
+}
