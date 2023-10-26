@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>My Library</h2>
+    <p>This is a project for The Odin Project in which I have to make a library using Object Constructors and
+        LocalStorage.
+        You can also view the Github repository of this project. </p>
+
+    <div class="input-container">
+        <div class="entry">
+            <div class="book">
+                <h4>Book</h4>
+                <input type="text" id="bookInput">
+            </div>
+            <div class="author">
+                <h4>Author</h4>
+                <input type="text" id="authorInput">
+            </div>
+            <div class="status">
+                <h4>Status</h4>
+                <select name="status" id="statusInput">
+                    <option value="read">Read</option>
+                    <option value="not read">Not read</option>
+                </select>
+            </div>
+        </div>
+        <div class="submit">
+            <button>Submit</button>
+        </div>
+        <div class="row">
+            <div class="twelveColumns"></div>
+            <table class="twelveColumns">
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </tbody>
+                <tbody id="book-table-body">
+                    <tr>
+                        <td>Alice in Wonderland</td>
+                        <td>Lewis Caroll</td>
+                        <td><button class="status-button">not read</button></td>
+                        <td><button class="delete">delete</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>The Lord of the Rings</td>
+                        <td>Tolkien</td>
+                        <td><button class="status-button">read</button></td>
+                        <td><button class="delete">delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
