@@ -81,7 +81,8 @@ select:focus {
     display: flex;
     margin: 1rem;
     margin-left: 0px;
-    align-items: center;
+    margin-right: 0px;
+    align-items: first center;
     justify-content: space-between;
 }
 
@@ -119,4 +120,11 @@ select:focus {
 .bookName,.authorName,.delete,.read{
     max-width: 25%;
     min-width: 25%;
+    
+}
+
+.delete,.read{
+    display: flex;
+    justify-content: end;
+    
 }

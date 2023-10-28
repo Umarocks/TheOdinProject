@@ -15,22 +15,27 @@ function addBook() {
     book: bookInput.value,
     author: authorInput.value,
     status: statuss.value,
+    index:library.length+1,
   };
   library.push(newBook);
   render();
 }
 
+function removeBook(index){
+    library.splice(1,index);
+    render();
+}
+
+
+
+
 function render() {
     const insertionDiv = document.getElementById("entryContainer");
     insertionDiv.innerHTML =' ';
-  library.forEach(function (book, index) {
-    console.log("Book " + (index + 1) + ":");
-    console.log("Book Name: " + book.book);
-    console.log("Author: " + book.author);
-    console.log("-------------------");
+    library.forEach(function (book, index) {
     var entryHTML = `
         <div class="entry">
-          <div class="bookName">
+          <div class="bookName" id="${book.index}">
             <h4>${book.book}</h4>
           </div>
           <div class="authorName">
@@ -39,13 +44,13 @@ function render() {
           <div class="read">
             <button>${book.status}</button>
           </div>
-          <div class="delete">
+          <div class="delete" id="${book.index}">
             <button>Delete</button>
           </div>
         </div>
       `;
-    
-    
     insertionDiv.innerHTML += entryHTML;
   });
 }
+
+
