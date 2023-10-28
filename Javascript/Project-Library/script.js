@@ -2,17 +2,17 @@ const library = [{
     book: "Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name",
     author: "Author Name",
     status: "Read",
-    index: 0,
+
   },{
-    book: "Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name",
+    book: "Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name",
     author: "Author Name",
     status: "Read",
-    index: 0,
+
   },{
-    book: "Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name",
+    book: "Book Name Book  Name Book Name Book Name Book Name Book Name Book Name Book Name",
     author: "Author Name",
     status: "Read",
-    index: 0,
+
   }];
 
 const bookInput = document.getElementById("bookInput");
@@ -30,7 +30,6 @@ function addBook() {
     book: bookInput.value,
     author: authorInput.value,
     status: statuss.value,
-    index:library.length+1,
   };
   library.push(newBook);
   render();
@@ -38,13 +37,24 @@ function addBook() {
 
 
 
+function findIndx(name){
+    return library.findIndex(obj => obj.book === name)
+}
+
+function statusChange(clickedbtn){
+    const statusbtn = findIndx(clickedbtn.parentElement.id);
+    if(library[statusbtn].status ==="Read"){
+        library[statusbtn].status="Not read"
+    }
+    else{
+        library[statusbtn].status="Read";
+    }
+    render();
+
+}
 
 function removeBook(clickedbtn){
-    const findIndx = (name) => {
-        return library.findIndex(obj => obj.book === name)
-    }
     const indexInLibrary = findIndx(clickedbtn.parentElement.id)
-    console.log(indexInLibrary);
     library.splice(indexInLibrary,1);
     render();
 }
@@ -53,6 +63,7 @@ function render() {
     const insertionDiv = document.getElementById("entryContainer");
     insertionDiv.innerHTML =' ';
     library.forEach(function (book, index) {
+    const id = book.book+book.author;
     var entryHTML = `
         <div class="entry">
           <div class="bookName" id="${book.index}">
@@ -61,8 +72,8 @@ function render() {
           <div class="authorName">
             <h4>${book.author.charAt(0).toUpperCase()+book.author.slice(1)}</h4>
           </div>
-          <div class="read">
-            <button>${book.status.charAt(0).toUpperCase()+book.status.slice(1)}</button>
+          <div class="read" id="${book.book}">
+            <button onclick= "statusChange(this)">${book.status.charAt(0).toUpperCase()+book.status.slice(1)}</button>
           </div>
           <div class="delete" id="${book.book}">
             <button onclick="removeBook(this)">Delete</button>
