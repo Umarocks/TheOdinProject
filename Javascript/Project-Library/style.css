@@ -77,7 +77,6 @@ select:focus {
   border-color: #33C3F0;
 }
 
-
 .entry{
     display: flex;
     margin: 1rem;
@@ -119,4 +118,5 @@ select:focus {
 
 .bookName,.authorName,.delete,.read{
     max-width: 25%;
+    min-width: 25%;
 }
