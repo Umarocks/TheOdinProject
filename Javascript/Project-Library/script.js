@@ -4,7 +4,7 @@ const bookInput = document.getElementById("bookInput");
 const authorInput = document.getElementById("authorInput");
 const statuss = document.getElementById("statusInput");
 const submit = document.getElementById("submit");
-
+var deleteBtn = document.querySelectorAll('.delete');
 submit.addEventListener("click", function () {
   addBook();
   console.log(library);
@@ -21,13 +21,11 @@ function addBook() {
   render();
 }
 
-function removeBook(index){
-    library.splice(1,index);
+function removeBook(clickedbtn){
+    console.log(clickedbtn.parentElement.id);
+    // library.splice(1,clickedbtn.id);
     render();
 }
-
-
-
 
 function render() {
     const insertionDiv = document.getElementById("entryContainer");
@@ -45,12 +43,21 @@ function render() {
             <button>${book.status}</button>
           </div>
           <div class="delete" id="${book.index}">
-            <button>Delete</button>
+            <button onclick="removeBook(this)">Delete</button>
           </div>
         </div>
       `;
     insertionDiv.innerHTML += entryHTML;
   });
+
 }
 
 
+
+
+// deleteBtn.forEach((button,index)=>{
+//     addEventListener('click',function(){
+//         const indice = this.document.getElementsByClassName('delete')
+//         console.log()
+//     })
+// })
