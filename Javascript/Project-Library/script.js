@@ -1,4 +1,19 @@
-const library = [];
+const library = [{
+    book: "Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name",
+    author: "Author Name",
+    status: "Read",
+    index: 0,
+  },{
+    book: "Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name",
+    author: "Author Name",
+    status: "Read",
+    index: 0,
+  },{
+    book: "Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name Book Name",
+    author: "Author Name",
+    status: "Read",
+    index: 0,
+  }];
 
 const bookInput = document.getElementById("bookInput");
 const authorInput = document.getElementById("authorInput");
@@ -21,9 +36,16 @@ function addBook() {
   render();
 }
 
+
+
+
 function removeBook(clickedbtn){
-    console.log(clickedbtn.parentElement.id);
-    // library.splice(1,clickedbtn.id);
+    const findIndx = (name) => {
+        return library.findIndex(obj => obj.book === name)
+    }
+    const indexInLibrary = findIndx(clickedbtn.parentElement.id)
+    console.log(indexInLibrary);
+    library.splice(indexInLibrary,1);
     render();
 }
 
@@ -34,15 +56,15 @@ function render() {
     var entryHTML = `
         <div class="entry">
           <div class="bookName" id="${book.index}">
-            <h4>${book.book}</h4>
+            <h4>${book.book.charAt(0).toUpperCase()+book.book.slice(1)}</h4>
           </div>
           <div class="authorName">
-            <h4>${book.author}</h4>
+            <h4>${book.author.charAt(0).toUpperCase()+book.author.slice(1)}</h4>
           </div>
           <div class="read">
-            <button>${book.status}</button>
+            <button>${book.status.charAt(0).toUpperCase()+book.status.slice(1)}</button>
           </div>
-          <div class="delete" id="${book.index}">
+          <div class="delete" id="${book.book}">
             <button onclick="removeBook(this)">Delete</button>
           </div>
         </div>
@@ -52,12 +74,4 @@ function render() {
 
 }
 
-
-
-
-// deleteBtn.forEach((button,index)=>{
-//     addEventListener('click',function(){
-//         const indice = this.document.getElementsByClassName('delete')
-//         console.log()
-//     })
-// })
+render();
