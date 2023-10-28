@@ -9,6 +9,7 @@ body{
 
 h4{
     margin-bottom: 3px;
+    
 }
 
 h2{
@@ -45,7 +46,6 @@ input:focus {
     outline: 1px solid #33C3F0; 
 }
  
-
 select{
   height: 38px;
   width: 100%;
@@ -88,6 +88,8 @@ select:focus {
 
 .entry h4{
     margin: 0px;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
     
 }
 
