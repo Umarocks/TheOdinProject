@@ -1,1 +1,3 @@
-console.log("hello mfs ");
+import initializeWebsite from "./InitializeWeb.js";
+
+initializeWebsite();
