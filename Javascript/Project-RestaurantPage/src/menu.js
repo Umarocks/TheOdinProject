@@ -76,7 +76,7 @@ function createMenuItem(name, description) {
 }
 
 function loadMenuItem() {
-  const content = document.querySelector(".homeContainer");
+  const content = document.querySelector(".container");
   content.textContent = "";
   content.appendChild(MenuItems());
 }

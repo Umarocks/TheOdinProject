@@ -18,17 +18,16 @@ function createNavbar() {
   const homeButton = document.createElement("button");
   homeButton.classList.add("homeButton");
   homeButton.textContent = "HOME";
-  homeButton.addEventListener("click",()=>{
+  homeButton.addEventListener("click", () => {
     loadHome();
-  })
-
+  });
 
   const menuButton = document.createElement("button");
   menuButton.classList.add("menuButton");
   menuButton.textContent = "Menu";
-  menuButton.addEventListener("click",()=>{
+  menuButton.addEventListener("click", () => {
     loadMenuitem();
-  })
+  });
 
   const contactButton = document.createElement("button");
   contactButton.classList.add("contactButton");
@@ -40,9 +39,12 @@ function createNavbar() {
   return navBar;
 }
 function initializeWebsite() {
-  const content = document.getElementById("content");
+  const content = document.querySelector(".content");
   content.appendChild(createHeader());
+  const container = document.querySelector(".content");
+  const containerDiv = document.createElement("div");
+  containerDiv.classList.add("container");
+  container.appendChild(containerDiv);
   loadHome();
-  
 }
 export default initializeWebsite;
