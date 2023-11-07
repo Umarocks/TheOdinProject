@@ -19,6 +19,10 @@ function Paragraph(string){
 
 function loadHome() {
     const content = document.querySelector(".content");
+    if(document.querySelector(".menuItem")){
+        const removeMenuContent = document.querySelector(".menuItem");
+        removeMenuContent.textContent="";
+    }
     content.appendChild(createHome());
 }
 

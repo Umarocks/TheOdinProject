@@ -1,4 +1,5 @@
 import loadHome from "./home";
+import loadMenuitem from "./menu";
 
 function createHeader() {
   const header = document.createElement("header");
@@ -17,10 +18,17 @@ function createNavbar() {
   const homeButton = document.createElement("button");
   homeButton.classList.add("homeButton");
   homeButton.textContent = "HOME";
+  homeButton.addEventListener("click",()=>{
+    loadHome();
+  })
+
 
   const menuButton = document.createElement("button");
   menuButton.classList.add("menuButton");
   menuButton.textContent = "Menu";
+  menuButton.addEventListener("click",()=>{
+    loadMenuitem();
+  })
 
   const contactButton = document.createElement("button");
   contactButton.classList.add("contactButton");
@@ -35,5 +43,6 @@ function initializeWebsite() {
   const content = document.getElementById("content");
   content.appendChild(createHeader());
   loadHome();
+  
 }
 export default initializeWebsite;
