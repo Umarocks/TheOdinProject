@@ -18,7 +18,6 @@ function Paragraph(string){
 }
 
 function loadHome() {
-    
     const content = document.querySelector(".container");
     content.textContent = "";
     content.appendChild(createHome());
