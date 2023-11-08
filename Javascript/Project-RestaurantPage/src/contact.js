@@ -1,5 +1,4 @@
 
-
 function createContact(){
     const contactContainer = document.createElement('div');
     contactContainer.classList.add('contactContainer');
