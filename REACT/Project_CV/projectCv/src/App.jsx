@@ -18,6 +18,8 @@ function App() {
     // const [prevState, setPrevState] = useState(null);
     function handlePersonalInfoChange(e) {
       const { key } = e.target.dataset;
+      console.log(e.target.dataset)
+      console.log(e.target.value)
       setPersonalInfo({ ...personalInfo, [key]: e.target.value });
     }
 

@@ -1,15 +1,15 @@
 import PersonalDetails from "./PersonalDetails.jsx";
 
 function InputGroup({
-    id,
-    placeholder,
-    type,
-    labelText,
-    onChange,
-    value,
-    optional,
-    recommended,
-    "data-key": dataKey,
+  id,
+  placeholder,
+  type,
+  labelText,
+  onChange,
+  value,
+  optional,
+  recommended,
+  "data-key": dataKey,
 }) {
   return (
     <div className="input-group">
