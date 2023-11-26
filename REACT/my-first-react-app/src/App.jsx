@@ -13,11 +13,22 @@ function App() {
 
   return (
     <>
-      <CVGenerator />
-      <SaveResume />
-      <GeneralInfo />
-      <EducationInfo />
-      <ProfessionalExperience />
+      <div className="container">
+        <div className="Cv">
+          <CVGenerator />
+        </div>
+        <div className="InputAndDisplay">
+          <div className="Input">
+            <div className="SaveResume">
+              <SaveResume />
+            </div>
+            <GeneralInfo />
+            <EducationInfo />
+            <ProfessionalExperience />
+          </div>
+          <div className="Display"></div>
+        </div>
+      </div>
     </>
   );
 }
