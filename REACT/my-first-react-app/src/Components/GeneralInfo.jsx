@@ -8,9 +8,9 @@ export default function GeneralInfo(props) {
     setGeneralInfoForm(!generalInfoFormShow);
   };
   return (
-    <div className="generalInfoContainer">
-      <div className="generalInfo">
-        <div className="GenerealInfoIconAndHeading">
+    <div className="GeneralInfoContainer">
+      <div className="GeneralInfo">
+        <div className="GeneralInfoIconAndHeading">
           <img
             src="https://rmathr.github.io/cv-project/ef5bc41af8e0851bed49.png"
             alt=""

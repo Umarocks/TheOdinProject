@@ -33,6 +33,13 @@
   height: 100dvh;
 }
 
+.Input img {
+  width: 24px;
+  height: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .Display {
   scrollbar-width: none;
   overflow-y: auto;
@@ -88,12 +95,12 @@ span {
   );
   color: white;
 }
-.svg-download {
+svg {
   width: 24px;
   height: auto;
 }
 
-.generalInfoContainer {
+.GeneralInfoContainer {
   margin-bottom: 24px;
   background-color: white;
   padding: 24px 18px;
@@ -104,7 +111,7 @@ span {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.generalInfo {
+.GeneralInfo {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -112,11 +119,72 @@ span {
   align-items: center;
 }
 
-input {
+.GeneralInfoIconAndDropDown {
+  display: flex;
+}
+.GeneralInfoIconAndHeading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.GeneralInfoDropDown {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
   background-color: #eef0f4;
   border: none;
   border-radius: 12px;
   height: 2.5rem;
   padding: 0 12px;
   outline: none;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.filling-form label {
+  padding-left: 12px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.form-buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.save-form {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 8px 16px;
+  border: none;
+  transition:
+    box-shadow 0.2s ease 0s,
+    -ms-transform 0.1s ease 0s,
+    -webkit-transform 0.1s ease 0s,
+    transform 0.1s ease 0s;
+  background: linear-gradient(
+    to right,
+    rgb(230, 30, 77) 0%,
+    rgb(227, 28, 95) 50%,
+    rgb(215, 4, 102) 100%
+  );
+  color: #fff;
 }
