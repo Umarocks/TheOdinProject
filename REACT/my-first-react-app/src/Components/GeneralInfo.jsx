@@ -11,7 +11,10 @@ export default function GeneralInfo(props) {
     <div className="generalInfoContainer">
       <div className="generalInfo">
         <div className="GenerealInfoIconAndHeading">
-          <img src="" alt="" />
+          <img
+            src="https://rmathr.github.io/cv-project/ef5bc41af8e0851bed49.png"
+            alt=""
+          />
           <h3>General Information</h3>
         </div>
         <div className="GeneralInfoDropDownIcon">

@@ -12,7 +12,10 @@ export default function EducationInfo() {
       <div className="EducationInfoContainer">
         <div className="EducationInfo">
           <div className="EducationInfoIconAndHead">
-            <img src="" alt="" />
+            <img
+              src="https://rmathr.github.io/cv-project/462edf5f6d5ba03edebc.png"
+              alt=""
+            />
             <h3>Education Information</h3>
           </div>
           <div className="EducationInfoDropDownIcon">
