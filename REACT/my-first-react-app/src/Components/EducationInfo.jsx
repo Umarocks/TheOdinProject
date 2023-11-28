@@ -4,6 +4,8 @@ export default function EducationInfo() {
   const [educationInfoFormShow, setEducationInfoForm] = useState(false);
 
   const handleEducationInfoForm = () => {
+    const displayFlex = document.querySelector(".EducationInfoDropDown");
+    displayFlex.style.display = "flex";
     setEducationInfoForm(!educationInfoFormShow);
   };
 
@@ -25,9 +27,9 @@ export default function EducationInfo() {
               onClick={handleEducationInfoForm}
             />
           </div>
-          <div className="EducationInfoDropDown">
-            {educationInfoFormShow && <EducationForm />}
-          </div>
+        </div>
+        <div className="EducationInfoDropDown">
+          {educationInfoFormShow && <EducationForm />}
         </div>
       </div>
     </>

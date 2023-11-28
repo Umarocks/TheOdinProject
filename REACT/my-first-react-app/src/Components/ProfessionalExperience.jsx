@@ -5,6 +5,8 @@ function ProfessionalExperience() {
     useState(false);
 
   function handleProfessionalInfoForm() {
+    const displayFlex = document.querySelector(".ProfessionalInfoDropDown");
+    displayFlex.style.display = "flex";
     setProfessionalInfoFormShow(!professionalInfoFormShow);
   }
   return (
@@ -12,13 +14,11 @@ function ProfessionalExperience() {
       <div className="ProfessionalInfoConatiner">
         <div className="ProfessionalInfo">
           <div className="ProfessionalInfoIconAndHead">
-            <div>
-              <img
-                src="https://rmathr.github.io/cv-project/b5791876cc5188ae758a.png"
-                alt=""
-              />
-              <h3>ProfessionalExperience</h3>
-            </div>
+            <img
+              src="https://rmathr.github.io/cv-project/b5791876cc5188ae758a.png"
+              alt=""
+            />
+            <h3>ProfessionalExperience</h3>
           </div>
           <div className="ProfessionalInfoDropDownIcon">
             <img
@@ -27,9 +27,9 @@ function ProfessionalExperience() {
               onClick={handleProfessionalInfoForm}
             />
           </div>
-          <div className="ProfessionalInfoDropDown">
-            {professionalInfoFormShow && <ProfessionalForm />}
-          </div>
+        </div>
+        <div className="ProfessionalInfoDropDown">
+          {professionalInfoFormShow && <ProfessionalForm />}
         </div>
       </div>
     </>

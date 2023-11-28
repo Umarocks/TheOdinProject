@@ -1,3 +1,9 @@
+h3,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
 .CVGeneratorContainer {
   border-radius: 16px;
   width: 100%;
@@ -100,7 +106,9 @@ svg {
   height: auto;
 }
 
-.GeneralInfoContainer {
+.GeneralInfoContainer,
+.EducationInfoContainer,
+.ProfessionalInfoConatiner {
   margin-bottom: 24px;
   background-color: white;
   padding: 24px 18px;
@@ -111,7 +119,9 @@ svg {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.GeneralInfo {
+.GeneralInfo,
+.EducationInfo,
+.ProfessionalInfo {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -119,18 +129,24 @@ svg {
   align-items: center;
 }
 
-.GeneralInfoIconAndDropDown {
+.GeneralInfoIconAndDropDown,
+.ProfessionalInfoDropDownIcon,
+.EducationInfoDropDownIcon {
   display: flex;
 }
-.GeneralInfoIconAndHeading {
+.GeneralInfoIconAndHeading,
+.EducationInfoIconAndHead,
+.ProfessionalInfoIconAndHead {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.GeneralInfoDropDown {
+.GeneralInfoDropDown,
+.EducationInfoDropDown,
+.ProfessionalInfoDropDown {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   margin-top: 12px;
 }
@@ -187,4 +203,8 @@ textarea {
     rgb(215, 4, 102) 100%
   );
   color: #fff;
+}
+
+textarea {
+  padding: 0.5rem;
 }
