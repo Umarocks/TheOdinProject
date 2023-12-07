@@ -9,8 +9,6 @@ import CVGenerator from "./Components/CVGenerator";
 import SaveResume from "./Components/SaveResume";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div className="container">
