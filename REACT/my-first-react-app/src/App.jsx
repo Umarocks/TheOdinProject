@@ -7,6 +7,7 @@ import EducationInfo from "./Components/EducationInfo";
 import ProfessionalExperience from "./Components/ProfessionalExperience";
 import CVGenerator from "./Components/CVGenerator";
 import SaveResume from "./Components/SaveResume";
+import resumeData from "./resumeData";
 
 function App() {
   return (
@@ -20,9 +21,11 @@ function App() {
             <div className="SaveResume">
               <SaveResume />
             </div>
-            <GeneralInfo />
-            <EducationInfo />
-            <ProfessionalExperience />
+            <GeneralInfo generalData={resumeData.generalInfo} />
+            <EducationInfo EducationInfoData={resumeData.educationInfo} />
+            <ProfessionalExperience
+              ProfessionalExperienceData={resumeData.professionalExperience}
+            />
           </div>
           <div className="Display"></div>
         </div>
