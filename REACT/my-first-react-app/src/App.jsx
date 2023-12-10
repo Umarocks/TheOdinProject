@@ -16,8 +16,12 @@ function App() {
   const saveInput = (obj) => {
     switch (obj.form) {
       case "GeneralInfo":
+        setGeneralInfoForm(obj);
+        console.log(obj);
       case "EducationInfo":
+        setEducationInfoForm(obj);
       case "ProfessionalInfo":
+        setProfessionalInfoForm(obj);
     }
   };
 
@@ -32,9 +36,9 @@ function App() {
             <div className="SaveResume">
               <SaveResume />
             </div>
-            <GeneralInfo />
-            <EducationInfo />
-            <ProfessionalExperience />
+            <GeneralInfo saveInput={saveInput} />
+            <EducationInfo saveInput={saveInput} />
+            <ProfessionalExperience saveInput={saveInput} />
           </div>
           <div className="Display"></div>
         </div>

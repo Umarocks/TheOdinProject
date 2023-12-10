@@ -29,7 +29,7 @@ export default function GeneralInfo(props) {
         </div>
       </div>
       <div className="GeneralInfoDropDown">
-        {generalInfoFormShow && <GeneralInfoForm />}
+        {generalInfoFormShow && <GeneralInfoForm saveInput={props.saveInput} />}
       </div>
     </div>
   );

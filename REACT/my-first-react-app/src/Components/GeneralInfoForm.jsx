@@ -1,51 +1,101 @@
-import React from "react";
+import React, { useRef } from "react";
+import { v4 as uuidv4 } from "uuid";
+export default function GeneralInfoForm(props) {
+  // generalInfo: {
+  //   id: 1,
+  //   fullName: "John Doe",
+  //   email: "john.doe@example.com",
+  //   phoneNum: "123-456-7890",
+  //   city: "Cityville",
+  //   province: "Provinceland",
+  // },
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const phoneRef = useRef();
+  const cityRef = useRef();
+  function nameRefSet(e) {
+    nameRef.current.value = e.target.value;
+  }
+  function emailRefSet(e) {
+    emailRef.current.value = e.target.value;
+  }
+  function phoneRefSet(e) {
+    phoneRef.current.value = e.target.value;
+  }
+  function cityRefSet(e) {
+    cityRef.current.value = e.target.value;
+  }
+  function setForm() {
+    const generalInfoObjid = uuidv4();
+    const generalInfoObj = {
+      id: generalInfoObjid,
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      Phone: phoneRef.current.value,
+      city: cityRef.current.value,
+      form: "GeneralInfo",
+    };
+    props.saveInput(generalInfoObj);
+  }
 
-export default function GeneralInfoForm() {
   return (
     <>
       <div className="input-container">
         <label htmlFor="fullName">Full Name</label>
         <input
           type="text"
+          ref={nameRef}
           name="fullName"
           placeholder="Enter your full name"
           id="fullName"
           defaultValue=""
+          onChange={nameRefSet}
         />
       </div>
       <div className="input-container">
         <label htmlFor="email">Email</label>
         <input
           type="text"
+          ref={emailRef}
           name="email"
           placeholder="Email"
           id="email"
           defaultValue=""
+          onChange={emailRefSet}
         />
       </div>
       <div className="input-container">
         <label htmlFor="phone">Phone Number</label>
         <input
           type="text"
+          ref={phoneRef}
           name="phone"
           placeholder="Phone"
           id="phone"
           defaultValue=""
+          onChange={phoneRefSet}
         />
       </div>
       <div className="input-container">
         <label htmlFor="address">City and province</label>
         <input
           type="text"
+          ref={cityRef}
           name="address"
           placeholder="City, Province"
           id="address"
           defaultValue=""
+          onChange={cityRefSet}
         />
       </div>
       <div className="form-buttons">
         <span></span>
-        <button className="save-form" type="submit" disabled="">
+        <button
+          className="save-form"
+          type="submit"
+          disabled=""
+          onClick={setForm}
+        >
           <span>
             {" "}
             <svg
