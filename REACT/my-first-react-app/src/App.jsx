@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import GeneralInfo from "./Components/GeneralInfo";
 import EducationInfo from "./Components/EducationInfo";
@@ -10,20 +8,26 @@ import SaveResume from "./Components/SaveResume";
 
 function App() {
   const [generalInfoForm, setGeneralInfoForm] = useState("");
-  const [educationInfoForm, setEducationInfoForm] = useState("");
-  const [professionalInfoForm, setProfessionalInfoForm] = useState("");
+  const [educationInfoForm, setEducationInfoForm] = useState([]);
+  const [professionalInfoForm, setProfessionalInfoForm] = useState([]);
 
-  const saveInput = (obj) => {
+  function saveInput(obj) {
     switch (obj.form) {
       case "GeneralInfo":
         setGeneralInfoForm(obj);
-        console.log(obj);
+        console.log(generalInfoForm);
+        break;
       case "EducationInfo":
-        setEducationInfoForm(obj);
-      case "ProfessionalInfo":
+        const x = [...educationInfoForm,obj];
+        setEducationInfoForm(x);
+        console.log(educationInfoForm)
+        break;
+        case "ProfessionalInfo":
         setProfessionalInfoForm(obj);
-    }
-  };
+        break;
+      }
+    
+  }
 
   return (
     <>

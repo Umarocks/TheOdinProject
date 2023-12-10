@@ -1,14 +1,6 @@
 import React, { useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
 export default function GeneralInfoForm(props) {
-  // generalInfo: {
-  //   id: 1,
-  //   fullName: "John Doe",
-  //   email: "john.doe@example.com",
-  //   phoneNum: "123-456-7890",
-  //   city: "Cityville",
-  //   province: "Provinceland",
-  // },
   const nameRef = useRef();
   const emailRef = useRef();
   const phoneRef = useRef();
@@ -31,7 +23,7 @@ export default function GeneralInfoForm(props) {
       id: generalInfoObjid,
       name: nameRef.current.value,
       email: emailRef.current.value,
-      Phone: phoneRef.current.value,
+      phone: phoneRef.current.value,
       city: cityRef.current.value,
       form: "GeneralInfo",
     };
@@ -92,7 +84,7 @@ export default function GeneralInfoForm(props) {
         <span></span>
         <button
           className="save-form"
-          type="submit"
+          type="button"
           disabled=""
           onClick={setForm}
         >

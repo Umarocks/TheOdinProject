@@ -6,7 +6,6 @@ export default function GeneralInfo(props) {
 
   const handleGeneralInfoForm = () => {
     const displayFlex = document.querySelector(".GeneralInfoDropDown");
-    console.log();
     displayFlex.style.display = "flex";
     setGeneralInfoForm(!generalInfoFormShow);
   };

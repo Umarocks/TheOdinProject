@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import EducationForm from "./EducationForm";
-export default function EducationInfo() {
+export default function EducationInfo(props) {
   const [educationInfoFormShow, setEducationInfoForm] = useState(false);
 
   const handleEducationInfoForm = () => {
@@ -29,7 +29,9 @@ export default function EducationInfo() {
           </div>
         </div>
         <div className="EducationInfoDropDown">
-          {educationInfoFormShow && <EducationForm />}
+          {educationInfoFormShow && (
+            <EducationForm saveInput={props.saveInput} />
+          )}
         </div>
       </div>
     </>
