@@ -7,9 +7,20 @@ import EducationInfo from "./Components/EducationInfo";
 import ProfessionalExperience from "./Components/ProfessionalExperience";
 import CVGenerator from "./Components/CVGenerator";
 import SaveResume from "./Components/SaveResume";
-import resumeData from "./resumeData";
 
 function App() {
+  const [generalInfoForm, setGeneralInfoForm] = useState("");
+  const [educationInfoForm, setEducationInfoForm] = useState("");
+  const [professionalInfoForm, setProfessionalInfoForm] = useState("");
+
+  const saveInput = (obj) => {
+    switch (obj.form) {
+      case "GeneralInfo":
+      case "EducationInfo":
+      case "ProfessionalInfo":
+    }
+  };
+
   return (
     <>
       <div className="container">
@@ -21,11 +32,9 @@ function App() {
             <div className="SaveResume">
               <SaveResume />
             </div>
-            <GeneralInfo generalData={resumeData.generalInfo} />
-            <EducationInfo EducationInfoData={resumeData.educationInfo} />
-            <ProfessionalExperience
-              ProfessionalExperienceData={resumeData.professionalExperience}
-            />
+            <GeneralInfo />
+            <EducationInfo />
+            <ProfessionalExperience />
           </div>
           <div className="Display"></div>
         </div>
