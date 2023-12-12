@@ -1,6 +1,43 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
-function ProfessionalForm() {
+function ProfessionalForm(props) {
+  
+  const jobTitleRef = useRef();
+  const companyRef = useRef();
+  const descriptionRef = useRef();
+  const startDateRef = useRef();
+  const endDateRef = useRef();
+  function jobTitleRefSet(e) {
+    jobTitleRef.current.value = e.target.value;
+  }
+  function companyRefSet(e) {
+    companyRef.current.value = e.target.value;
+  }
+  function descriptionRefSet(e) {
+    descriptionRef.current.value = e.target.value;
+  }
+
+  function startDateRefSet(e) {
+    startDateRef.current.value = e.target.value;
+  }
+  function endDateRefSet(e) {
+    endDateRef.current.value = e.target.value;
+  }
+
+  function setForm() {
+    const id = uuidv4();
+    const professionalFormObj = {
+      id: id,
+      jobTitle: jobTitleRef.current.value,
+      company: companyRef.current.value,
+      description: descriptionRef.current.value,
+      startDate: startDateRef.current.value,
+      endDate: endDateRef.current.value,
+      form: "ProfessionalInfo",
+    };
+    props.saveInput(professionalFormObj);
+  }
   return (
     <>
       <form>
@@ -8,20 +45,24 @@ function ProfessionalForm() {
           <label htmlFor="jobTitle">Job Title</label>
           <input
             type="text"
+            ref={jobTitleRef}
             name="jobTitle"
             placeholder="Enter Job Title"
             id="jobTitle"
             defaultValue=""
+            onChange={jobTitleRefSet}
           />
         </div>
         <div className="input-container">
           <label htmlFor="company">Company</label>
           <input
             type="text"
+            ref={companyRef}
             name="company"
             placeholder="Enter Company"
             id="company"
             defaultValue=""
+            onChange={companyRefSet}
           />
         </div>
         <div className="input-dates">
@@ -29,20 +70,24 @@ function ProfessionalForm() {
             <label htmlFor="startDatePro">Start Date</label>
             <input
               type="date"
+              ref={startDateRef}
               name="startDatePro"
               placeholder="mm / dd / yy"
               id="startDatePro"
               defaultValue=""
+              onChange={startDateRefSet}
             />
           </div>
           <div className="input-container">
             <label htmlFor="endDatePro">End Date</label>
             <input
               type="date"
+              ref={endDateRef}
               name="endDatePro"
               placeholder="mm / dd / yy"
               id="endDatePro"
               defaultValue=""
+              onChange={endDateRefSet}
             />
           </div>
         </div>
@@ -50,13 +95,15 @@ function ProfessionalForm() {
           <label htmlFor="mainTasks">Description</label>
           <textarea
             name="mainTasks"
+            ref={descriptionRef}
             placeholder="Main tasks"
             id="mainTasks"
+            onChange={descriptionRefSet}
           ></textarea>
         </div>
         <div className="form-buttons">
           <span></span>
-          <button className="save-form" type="submit" disabled="">
+          <button className="save-form" type="button" disabled="" onClick={setForm}>
             <span>
               {" "}
               <svg

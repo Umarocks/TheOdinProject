@@ -23,7 +23,9 @@ function App() {
         console.log(educationInfoForm)
         break;
         case "ProfessionalInfo":
-        setProfessionalInfoForm(obj);
+        const y = [...professionalInfoForm,obj];
+        setProfessionalInfoForm(y);
+        console.log(professionalInfoForm)
         break;
       }
     

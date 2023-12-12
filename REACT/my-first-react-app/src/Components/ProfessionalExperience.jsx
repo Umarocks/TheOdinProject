@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ProfessionalForm from "./ProfessionalForm";
-function ProfessionalExperience() {
+function ProfessionalExperience(props) {
   const [professionalInfoFormShow, setProfessionalInfoFormShow] =
     useState(false);
 
@@ -29,7 +29,7 @@ function ProfessionalExperience() {
           </div>
         </div>
         <div className="ProfessionalInfoDropDown">
-          {professionalInfoFormShow && <ProfessionalForm />}
+          {professionalInfoFormShow && <ProfessionalForm saveInput={props.saveInput} />}
         </div>
       </div>
     </>
