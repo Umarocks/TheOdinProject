@@ -57,6 +57,9 @@ function App() {
                 generalInfoForm={generalInfoForm}
                 professionalInfoForm={professionalInfoForm}
                 educationInfoForm={educationInfoForm}
+                generalEmpty={generalEmpty}
+                educationEmpty={educationEmpty}
+                professionalEmpty={professionalEmpty}
               />
             )}
           </div>

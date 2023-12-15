@@ -1,5 +1,6 @@
 import React from "react";
 import EducationDisplay from "./EducationDisplay";
+import GeneralInfoDisplay from "./GeneralInfoDisplay";
 // const generalInfoObj = {
 //   id: generalInfoObjid,
 //   name: nameRef.current.value,
@@ -8,36 +9,15 @@ import EducationDisplay from "./EducationDisplay";
 //   city: cityRef.current.value,
 //   form: "GeneralInfo",
 // };
-// const educationFormObj = {
-//   id: id,
-//   degree: degreeRef.current.value,
-//   school: schoolRef.current.value,
-//   city: cityRef.current.value,
-//   country: countryRef.current.value,
-//   startDate: startDateRef.current.value,
-//   endDate: endDateRef.current.value,
-//   form: "EducationInfo",
-// };
+
 function Display(props) {
   return (
     <>
       <div className="displayContainer">
         <div className="generalInfoDisplay">
-          <div
-            className="generalName"
-            style={{ borderBottom: "2px black solid" }}
-          >
-            <h1>{props.generalInfoForm.name}</h1>
-          </div>
-          <div className="generalemailetc">
-            <p>
-              {props.generalInfoForm.email +
-                " " +
-                props.generalInfoForm.phone +
-                " " +
-                props.generalInfoForm.city}
-            </p>
-          </div>
+          {!props.generalEmpty && (
+            <GeneralInfoDisplay generalInfoForm={props.generalInfoForm} />
+          )}
         </div>
         <div className="educationalInfoDisplay">
           <div className="educationleftSide">
