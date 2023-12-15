@@ -1,4 +1,5 @@
 import React from "react";
+import EducationDisplay from "./EducationDisplay";
 // const generalInfoObj = {
 //   id: generalInfoObjid,
 //   name: nameRef.current.value,
@@ -38,7 +39,13 @@ function Display(props) {
             </p>
           </div>
         </div>
-        <div className="educationalInfoDisplay"></div>
+        <div className="educationalInfoDisplay">
+          <div className="educationleftSide">
+            {props.educationInfoForm.map((element) => (
+              <EducationDisplay key={element.id} element={element} />
+            ))}
+          </div>
+        </div>
         <div className="professionalInfoDisplay"></div>
       </div>
     </>
