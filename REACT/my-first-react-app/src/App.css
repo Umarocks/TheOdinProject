@@ -1,5 +1,7 @@
-h3,
-p {
+h1,
+p,
+h2,
+h3 {
   margin: 0px;
   padding: 0px;
 }
@@ -207,4 +209,29 @@ textarea {
 
 textarea {
   padding: 0.5rem;
+}
+
+.generalInfoDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+  padding: 0.3rem;
+}
+
+.generalName {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: small;
+  padding: 0.5rem;
+}
+
+.generalemailetc {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  font-size: smaller;
+  justify-content: space-evenly;
 }

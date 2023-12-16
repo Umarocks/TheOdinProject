@@ -3,17 +3,15 @@ import React from "react";
 function GeneralInfoDisplay(props) {
   return (
     <>
-      <div className="generalName" style={{ borderBottom: "2px black solid" }}>
-        <h1>{props.generalInfoForm.name}</h1>
+      <div className="generalName">
+        <h2>{props.generalInfoForm.name}</h2>
       </div>
       <div className="generalemailetc">
-        <p>
-          {props.generalInfoForm.email +
-            " " +
-            props.generalInfoForm.phone +
-            " " +
-            props.generalInfoForm.city}
-        </p>
+        <p>{props.generalInfoForm.email}</p>
+
+        <p>{props.generalInfoForm.phone}</p>
+
+        <p>{props.generalInfoForm.city}</p>
       </div>
     </>
   );
