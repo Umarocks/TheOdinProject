@@ -1,14 +1,7 @@
 import React from "react";
 import EducationDisplay from "./EducationDisplay";
 import GeneralInfoDisplay from "./GeneralInfoDisplay";
-// const generalInfoObj = {
-//   id: generalInfoObjid,
-//   name: nameRef.current.value,
-//   email: emailRef.current.value,
-//   phone: phoneRef.current.value,
-//   city: cityRef.current.value,
-//   form: "GeneralInfo",
-// };
+import ProfessionalDisplay from "./ProfessionalDisplay";
 
 function Display(props) {
   return (
@@ -27,7 +20,12 @@ function Display(props) {
               ))}
           </div>
         </div>
-        <div className="professionalInfoDisplay"></div>
+        <div className="professionalInfoDisplay">
+          {!props.professionalEmpty &&
+            props.professionalInfoForm.map((element) => (
+              <ProfessionalDisplay key={element.id} element={element} />
+            ))}
+        </div>
       </div>
     </>
   );
