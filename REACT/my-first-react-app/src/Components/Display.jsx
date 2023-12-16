@@ -21,9 +21,10 @@ function Display(props) {
         </div>
         <div className="educationalInfoDisplay">
           <div className="educationleftSide">
-            {props.educationInfoForm.map((element) => (
-              <EducationDisplay key={element.id} element={element} />
-            ))}
+            {!props.educationEmpty &&
+              props.educationInfoForm.map((element) => (
+                <EducationDisplay key={element.id} element={element} />
+              ))}
           </div>
         </div>
         <div className="professionalInfoDisplay"></div>
