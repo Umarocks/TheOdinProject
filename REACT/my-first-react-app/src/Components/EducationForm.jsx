@@ -7,6 +7,17 @@ function EducationForm(props) {
   const cityRef = useRef();
   const startDateRef = useRef();
   const endDateRef = useRef();
+  const [startDate, setStartDate] = useState();
+  const [endDate, setEndDate] = useState();
+  function dateChange(date) {
+    const dateObj = new Date(date);
+    const monthInWrds = new Intl.DateTimeFormat("en", {
+      month: "short",
+    }).format(dateObj);
+    const year = dateObj.getFullYear();
+    const result = monthInWrds + " " + year;
+    return result;
+  }
   function degreeRefSet(e) {
     degreeRef.current.value = e.target.value;
   }
@@ -21,9 +32,11 @@ function EducationForm(props) {
   }
   function startDateRefSet(e) {
     startDateRef.current.value = e.target.value;
+    setStartDate(dateChange(e.target.value));
   }
   function endDateRefSet(e) {
     endDateRef.current.value = e.target.value;
+    setEndDate(dateChange(e.target.value));
   }
 
   function setForm() {
@@ -34,8 +47,8 @@ function EducationForm(props) {
       school: schoolRef.current.value,
       city: cityRef.current.value,
       country: countryRef.current.value,
-      startDate: startDateRef.current.value,
-      endDate: endDateRef.current.value,
+      startDate: startDate,
+      endDate: endDate,
       form: "EducationInfo",
     };
     props.saveInput(educationFormObj);

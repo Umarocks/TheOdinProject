@@ -13,24 +13,18 @@ import React from "react";
 function ProfessionalDisplay(props) {
   return (
     <>
-      <div className="professionalLeftSide">
-        <div className="JobTitle">
-          <b>{props.element.jobTitle}</b>
+      <div className="entry">
+        <div className="cv-jobTitle-company">
+          <p className="jobTitle">{props.element.jobTitle}</p>
+          <p className="company">{props.element.company}</p>
         </div>
-        <div className="professionalLeftSideDown">
-          <div className="company">
-            <p>{props.element.company}</p>
-          </div>
-          <div className="city">
-            <p>{props.element.city}</p>
-          </div>
+        <div className="cv-dates">
+          <p className="startDatePro">{props.element.startDate}</p>
+          <p className="endDatePro">{props.element.endDate}</p>
         </div>
-      </div>
-      <div className="professionalRightSide">
-        <p>{props.element.startDate + " " + props.element.endDate}</p>
-      </div>
-      <div className="professionalDescription">
-        <p>{props.element.description}</p>
+        <div className="cv-mainTasks">
+          <p className="mainTasks">{props.element.description}</p>
+        </div>
       </div>
     </>
   );

@@ -2,12 +2,22 @@ import React, { useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 function ProfessionalForm(props) {
-  
   const jobTitleRef = useRef();
   const companyRef = useRef();
   const descriptionRef = useRef();
   const startDateRef = useRef();
   const endDateRef = useRef();
+  const [startDate, setStartDate] = useState();
+  const [endDate, setEndDate] = useState();
+  function dateChange(date) {
+    const dateObj = new Date(date);
+    const monthInWrds = new Intl.DateTimeFormat("en", {
+      month: "short",
+    }).format(dateObj);
+    const year = dateObj.getFullYear();
+    const result = monthInWrds + " " + year;
+    return result;
+  }
   function jobTitleRefSet(e) {
     jobTitleRef.current.value = e.target.value;
   }
@@ -20,9 +30,11 @@ function ProfessionalForm(props) {
 
   function startDateRefSet(e) {
     startDateRef.current.value = e.target.value;
+    setStartDate(dateChange(e.target.value));
   }
   function endDateRefSet(e) {
     endDateRef.current.value = e.target.value;
+    setEndDate(dateChange(e.target.value));
   }
 
   function setForm() {
@@ -32,8 +44,8 @@ function ProfessionalForm(props) {
       jobTitle: jobTitleRef.current.value,
       company: companyRef.current.value,
       description: descriptionRef.current.value,
-      startDate: startDateRef.current.value,
-      endDate: endDateRef.current.value,
+      startDate: startDate,
+      endDate: endDate,
       form: "ProfessionalInfo",
     };
     props.saveInput(professionalFormObj);
@@ -103,7 +115,12 @@ function ProfessionalForm(props) {
         </div>
         <div className="form-buttons">
           <span></span>
-          <button className="save-form" type="button" disabled="" onClick={setForm}>
+          <button
+            className="save-form"
+            type="button"
+            disabled=""
+            onClick={setForm}
+          >
             <span>
               {" "}
               <svg

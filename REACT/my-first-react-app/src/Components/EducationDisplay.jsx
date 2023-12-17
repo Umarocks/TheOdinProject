@@ -12,16 +12,19 @@ import React from "react";
 function EducationDisplay(props) {
   return (
     <>
-      <div className="educationLeftSide">
-        <div className="school">
-          <b>{props.element.school}</b>
+      <div className="entry">
+        <div className="cv-degree-school">
+          <p className="degree">{props.element.degree}</p>
+          <p className="school">{props.element.school}</p>
         </div>
-        <div className="degree">
-          <p>{props.element.degree}</p>
+        <div className="cv-dates">
+          <p className="startDate">{props.element.startDate} </p>
+          <p className="endDate">{props.element.endDate}</p>
         </div>
-      </div>
-      <div className="educationRightSide">
-        <p>{props.element.startDate + " " + props.element.endDate}</p>
+        <div className="cv-city-country">
+          <p className="city">{props.element.city}</p>
+          <p className="country">{props.element.country}</p>
+        </div>
       </div>
     </>
   );
